@@ -681,6 +681,46 @@ function farm_livestock_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_medical-field_farm_time_spent'.
+  $field_instances['log-farm_medical-field_farm_time_spent'] = array(
+    'bundle' => 'farm_medical',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'How long did this procedure take?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_time_spent',
+    'label' => 'Time spent',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' hour|hours',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Assets');
@@ -692,6 +732,7 @@ function farm_livestock_field_default_field_instances() {
   t('Files');
   t('Group');
   t('Has this animal been castrated?');
+  t('How long did this procedure take?');
   t('ID');
   t('ID Tag(s)');
   t('List any identification tags that this animal has. These can be ear tags, tattoos, leg bands, etc. Use the fields below to describe the type, location, and ID of each.');
@@ -702,6 +743,7 @@ function farm_livestock_field_default_field_instances() {
   t('Photo(s)');
   t('Sex');
   t('Tag Type');
+  t('Time spent');
   t('Type');
   t('What assets do this medical log pertain to?');
   t('What is the species/breed of this animal? You can manage the list of available species/breeds in the ' . l('Animal Species/Breeds', 'farm/assets/animals/types') . ' vocabulary.');

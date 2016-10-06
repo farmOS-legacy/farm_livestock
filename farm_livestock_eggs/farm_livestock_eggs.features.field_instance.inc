@@ -118,12 +118,54 @@ function farm_livestock_eggs_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'log-farm_eggs-field_farm_time_spent'.
+  $field_instances['log-farm_eggs-field_farm_time_spent'] = array(
+    'bundle' => 'farm_eggs',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'How long did egg collection take?',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'log',
+    'field_name' => 'field_farm_time_spent',
+    'label' => 'Time spent',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' hour|hours',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 8,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Group');
+  t('How long did egg collection take?');
   t('How many eggs were collected?');
   t('Notes');
   t('Quantity');
+  t('Time spent');
   t('What group/flock were these eggs collected from?');
 
   return $field_instances;
